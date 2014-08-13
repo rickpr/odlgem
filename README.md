@@ -6,7 +6,7 @@ This gem is made as a ruby wrapper for OpenDaylight's FlowProgrammer api
 
 Add this line to your application's Gemfile:
 
-    gem 'odlgem', :git => "https://github.com/rickpr/odlgem.git"
+    gem 'odlgem'
 
 And then execute:
 
