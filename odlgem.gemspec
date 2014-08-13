@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["rickpr"]
   spec.email         = ["fdisk@fdisk.co"]
   spec.summary       = "Ruby Wrapper for OpenDaylight FlowProgrammer"
-  spec.description   = "Makes Programming flows with Ruby easy"
-  spec.homepage      = ""
+  spec.description   = "Makes Programming OpenDaylight flows with Ruby easy"
+  spec.homepage      = "http://fdisk.co"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
