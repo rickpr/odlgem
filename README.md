@@ -63,6 +63,31 @@ Here are the possible arguments for makeflow. All the arguments default to nil u
     cookie		#Cookie enhancements
 
 
+## OpenDaylight Actions for the actions field
+CONTROLLER 
+DROP 
+ENQUEUE 
+FLOOD 
+FLOOD_ALL 
+HW_PATH 
+INTERFACE 
+LOOPBACK 
+OUTPUT 
+POP_VLAN 
+PUSH_VLAN 
+SET_DL_DST 
+SET_DL_SRC 
+SET_DL_TYPE 
+SET_NEXT_HOP 
+SET_NW_DST 
+SET_NW_SRC 
+SET_NW_TOS 
+SET_TP_DST 
+SET_TP_SRC 
+SET_VLAN_CFI 
+SET_VLAN_ID 
+SET_VLAN_PCP 
+SW_PATH
 
 ## Contributing
 
