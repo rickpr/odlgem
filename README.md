@@ -89,6 +89,8 @@ SET_VLAN_ID
 SET_VLAN_PCP 
 SW_PATH
 
+##Topology
+
 To get your topology, use Opendaylight.topology:
 
     Odlgem::OpenDaylight.topology
