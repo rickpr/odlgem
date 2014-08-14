@@ -89,6 +89,53 @@ SET_VLAN_ID
 SET_VLAN_PCP 
 SW_PATH
 
+To get your topology, use Opendaylight.topology:
+
+    Odlgem::OpenDaylight.topology
+
+This returns a hash of all the edges (links). The hash is organized as follows (I have capitalized things that will come back as variables):
+
+    "edgeProperties"=>[{
+            "properties"=>{
+                "timeStamp"=>{
+                    "value"=>TIMESTAMP, "name"=>"NAME"
+                }
+                , "name"=>{
+                    "value"=>"SWITCHNAME-PORTNAME"
+                }
+                , "state"=>{
+                    "value"=>LINKSTATE
+                }
+                , "config"=>{
+                    "value"=>CONFIGSTATE
+                }
+                , "bandwidth"=>{
+                    "value"=>BANDWIDTH
+                }
+
+            }
+            , "edge"=>{
+                "tailNodeConnector"=>{
+                    "node"=>{
+                        "id"=>"SWITCHID", "type"=>"SWITCHTYPE" #Usually the switch ID is a MAC address and the type is OF for OpenFlow
+                    }
+                    , "id"=>"PORTID", "type"=>"LINKTYPE" #I believe the PORTID is the interface of the connected device, type is usually OF for OpenFlow
+                }
+                , "headNodeConnector"=>{
+                    "node"=>{
+                        "id"=>"SWITCHID", "type"=>"SWITCHTYPE"
+                    }
+                    , "id"=>"PORTID", "type"=>"LINKTYPE"
+                }
+
+            }
+        
+        }
+            "properties" => {#This would be the next link
+            ....
+        }
+    }]
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/odlgem/fork )
