@@ -53,7 +53,10 @@ module Odlgem
       }
       HTTParty.put("#{url}controller/nb/v2/flowprogrammer/#{containerName}/node/#{type}/#{id}/staticFlow/#{name}",options)
     end
-
+    def self.topology(username: Odlgem.configuration.username, password: Odlgem.configuration.password, url: Odlgem.configuration.url, containerName: "default")
+        auth = {username: username, password: password}
+        HTTParty.get("#{url}controller/nb/v2/topology/#{containerName}", :basic_auth => auth)
+    end
     def username
       Odlgem.configuration.username
     end
